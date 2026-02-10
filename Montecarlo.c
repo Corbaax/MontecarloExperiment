@@ -23,12 +23,10 @@ int main(int argc, char*argv[]){
 	int sum = 0;
 	int i = 0;
 	start = clock();
-	#pragma omp parallel loop num_threads(2) schedule(dynamic, 100000) shared(i,sum)
-{
+	
 	for(i = 0; i<n; i++){
 		sum += valuta();
 	}
-}
 	end = clock();
 
 	double area = (double) sum/i;
