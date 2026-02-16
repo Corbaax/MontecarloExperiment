@@ -45,8 +45,20 @@ int main(int argc, char*argv[]){
 	double end = omp_get_wtime();
 
 	double area = 4.0 * ((double)sum / count);
-	printf("%.8f \n", area);
-	printf("%ld, %ld \n",count,sum);
-	printf("exec time: %.3f\n", end - start);
+	//printf("%.8f \n", area);
+	//printf("%ld, %ld \n",count,sum);
+	//printf("exec time: %.3f\n", end - start);
+
+	// CSV Text
+	// number_of_points , result_in_points, final_area , exec_time , number_of_thread, machine_label
+	printf(
+		"%ld, %ld, %0.10f, %.5f, %d, %s \n",
+		count,
+		sum,
+		area,
+		end-start,
+		th,
+		"Laptop"
+	);
 	return 0;
 };
