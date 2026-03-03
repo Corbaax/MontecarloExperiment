@@ -11,9 +11,7 @@ In questo studio si è voluto sperimentare l'implementazione di un carico comput
 
 Per prima cosa è stato deciso il carico computazionale da implementare, nello specifico si è scelto di utilizzare un algoritmo di stima del valore di $\pi$ utilizzando il metodo di Montecarlo.
 Il metodo di Montecarlo è una statistica che permette di stimare l'area di una funzione matematica continua in un intervallo definito, di cui si conosce il massimo valore.
-$$
-MonteCarlo_{[a,b]}(f(x)) \approx \int_a^b f(x) dx
-$$
+$$MonteCarlo_{[a,b]}(f(x)) \approx \int_a^b f(x) dx$$
 Generando dei punti casuali all'interno di un rettangolo immaginario che si estende sull'asse x con intervallo $[a,b]$ e sull'asse y $[0,max(f(x))]$ ci aspettiamo che la probabilità che un punto ricada all'interno dell'area della funzione sia proporzionale all'area stessa.
 $$
 \begin{aligned}
